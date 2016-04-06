@@ -3,7 +3,7 @@ var fs = require('fs');
 //异步方式，打印文件内容到控制台
 function print(src) {
   //If no encoding is specified, then the raw buffer is returned.
-  fs.readFile(src, 'utf8', function(err, data){
+  fs.readFile(src, 'utf8', function(err, data) {
     if (err) throw err;
     console.log(data);
   });
@@ -13,11 +13,11 @@ function print(src) {
 function printSync(src) {
   try {
     var data = fs.readFileSync(src);
-      console.log(data);
-    } catch (err) {
-        // Deal with error.
-         console.log(err);
-    }
+    console.log(data);
+  } catch (err) {
+    // Deal with error.
+    console.log(err);
+  }
 }
 
 //文件拷贝
